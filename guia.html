@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Básica de PseInt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="pantalla-bienvenida">
+    <div class="contenido-bienvenida">
+      <h1 class="titulo-principal">Guía de PseInt</h1>
+      <button id="btn-ingresar" type="button">Ingresar</button>
+
+      <div class="zona-reloj">
+        <div class="reloj-analogico">
+          <div class="marca marca-12">12</div>
+          <div class="marca marca-3">3</div>
+          <div class="marca marca-6">6</div>
+          <div class="marca marca-9">9</div>
+
+          <div class="aguja hora" id="aguja-hora"></div>
+          <div class="aguja minuto" id="aguja-minuto"></div>
+          <div class="aguja segundo" id="aguja-segundo"></div>
+          <div class="centro-reloj"></div>
+        </div>
+
+        <p id="hora-digital" class="hora-digital">--:--:--</p>
+        <p id="saludo-horario" class="saludo-horario">Cargando...</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="contenido-guia" class="oculto">
+    <div id="contenedor">
+      <h1 id="arriba">Guía Básica de PseInt</h1>
+
+      <p class="introduccion">
+        <strong>PSeInt</strong> sirve para escribir algoritmos en español usando <em>pseudocódigo</em> antes de pasar a un lenguaje de programación como <strong>C++, Python, Java, etc.</strong>
+      </p>
+      <img src="imagenes/pseint1.jpg" alt="logopseint" class="img-pseint">
+
+      <h2>Puntos importantes que veremos:</h2>
+
+      <ul class="indice">
+        <li><a href="#instalacion">Guía de instalación</a></li>
+        <li><a href="#interfaz">Conociendo la interfaz de PseInt</a></li>
+        <li><a href="#algoritmos">Algoritmos</a></li>
+        <li><a href="#diagrama">Diagrama de Flujo</a></li>
+        <li><a href="#comparacion">Pseudocódigo vs. lenguajes reales</a></li>
+        <li><a href="#glosario">Glosario</a></li>
+        <li><a href="#Biblioteca">Biblioteca</a></li>
+      </ul>
+
+      <hr />
+
+      <h2 id="instalacion">1. Guía de instalación</h2>
+      <h3>Descargar el programa (eligiendo el sistema operativo correcto)</h3>
+      <p>Entra al sitio oficial de <strong>PseInt</strong> y descarga el instalador correspondiente a tu sistema operativo sea <strong>Windows, Linux o MacOS</strong>.</p>
+      <img src="imagenes/descarga1.jpg" alt="descarga1" class="img-pseint">
+
+      <p class="volver"><a href="#arriba">Volver al inicio &uarr;</a></p>
+
+      <h2 id="interfaz">2. Conociendo la interfaz de PseInt</h2>
+      <p>Al abrir <strong>PseInt</strong> verás tres zonas principales:</p>
+      <table>
+        <tr>
+          <th>Editor de código (centro):</th>
+          <th>Panel de comandos (derecha):</th>
+          <th>Consola de ejecución (ventana emergente al ejecutar):</th>
+        </tr>
+        <tr>
+          <td>Donde escribes tu algoritmo</td>
+          <td>Atajos rápidos para insertar estructuras como</td>
+          <td>Muestra los mensajes en pantalla y te permite ingresar datos por teclado.</td>
+        </tr>
+        <tr class="par">
+          <td>Proceso ... FinProceso</td>
+          <td>Escribir, Leer, Asignar, Si-Entonces, Mientras o Para.</td>
+          <td>Se muestra el resultado del algoritmo creado, sea calculadora, alguna fórmula, etc.</td>
+        </tr>
+      </table>
+      <p class="volver"><a href="#arriba">Volver al inicio &uarr;</a></p>
+
+      <h2 id="algoritmos">3. Primer Algoritmo</h2>
+      <p>Para comenzar con nuestro primer algoritmo crearemos un pseudocódigo que pida un nombre de usuario y salude:</p>
+      <h3>Nombra el pseudocódigo</h3>
+      <p>En la primera línea reemplaza el <strong>sin_titulo</strong> por un nombre descriptivo por ejemplo <strong>SaludoSimple.</strong></p>
+      <h3>Define variables:</h3>
+      <p>Usa <strong>Definir</strong> para indicar qué tipo de dato guardarás <strong>(Caracter, Entero, Real, Logico).</strong></p>
+      <h3>Muestra y lee datos:</h3>
+      <p>Usa <strong>Escribir</strong> para mostrar un mensaje y <strong>Leer</strong> para capturar lo que escriba el usuario.</p>
+      <hr>
+      <img src="imagenes/algoritmo1.jpg" alt="algoritmo1" class="img-pseint">
+      <hr>
+      <p class="volver"><a href="#arriba">Volver al inicio &uarr;</a></p>
+
+      <h2 id="diagrama">4. Diagrama de Flujo</h2>
+      <p>Un <strong>diagrama de flujo</strong> es la representación gráfica de un algoritmo mediante <strong>figuras geométricas</strong> conectadas por flechas que indican el orden de ejecución y el sentido del flujo lógico. Traduce las instrucciones escritas en <strong>pseudocódigo</strong> (como Escribir, Leer, asignaciones, condicionales o bucles) a un mapa visual donde es más fácil seguir cómo se transforman los datos y dónde se toman decisiones.</p>
+      <h3>Diagrama de flujo (F7 o ícono de diagrama):</h3>
+      <p>Genera automáticamente el diagrama de flujo de tu algoritmo, ideal para visualizar condicionales y bucles.</p>
+      <hr>
+      <img src="imagenes/diagrama1.jpg" alt="diagrama1" class="img-pseint">
+      <hr>
+      <p class="volver"><a href="#arriba">Volver al inicio &uarr;</a></p>
+      
+      <h3>Ejecutar (F9 o botón verde de Play):</h3>
+      <p>Abre la ventana de ejecución. Escribe tu nombre y presiona Enter para ver el resultado. Si hay un error de sintaxis, <strong>PSeInt</strong> marcará la línea con un mensaje explicativo.</p>
+      <hr>
+      <img src="imagenes/ejecucion1.jpg" alt="ejecucion1" class="img-pseint">
+      <hr />
+
+      <h3>Ejecutar paso a paso (F8):</h3>
+      <p>Avanza <strong>instrucción por instrucción</strong> para observar cómo cambia el flujo y revisar el valor de las variables.</p>
+      <hr>
+      <img src="imagenes/ejecucion2.jpg" alt="Ejecución en PSeInt" class="img-pseint">
+      <hr>
+
+      <h2 id="comparacion">5. Pseudocódigo vs. lenguajes reales</h2>
+      <p>El pseudocódigo de <strong>PseInt</strong> es el paso previo a programar en un lenguaje real. La lógica es la misma, solo cambia la forma de escribirla (la <strong>sintaxis</strong>).</p>
+
+      <h3>Equivalencias básicas</h3>
+      <table>
+        <tr>
+          <th>Acción</th>
+          <th>PseInt</th>
+          <th>Python</th>
+          <th>C++</th>
+        </tr>
+        <tr>
+          <td>Mostrar en pantalla</td>
+          <td>Escribir</td>
+          <td>print()</td>
+          <td>cout &lt;&lt;</td>
+        </tr>
+        <tr class="par">
+          <td>Leer datos</td>
+          <td>Leer</td>
+          <td>input()</td>
+          <td>cin &gt;&gt;</td>
+        </tr>
+        <tr>
+          <td>Asignar un valor</td>
+          <td>&lt;- (o =)</td>
+          <td>=</td>
+          <td>=</td>
+        </tr>
+        <tr class="par">
+          <td>Condicional</td>
+          <td>Si - Entonces - SiNo - FinSi</td>
+          <td>if - else</td>
+          <td>if - else</td>
+        </tr>
+        <tr>
+          <td>Repetir con contador</td>
+          <td>Para - FinPara</td>
+          <td>for</td>
+          <td>for</td>
+        </tr>
+        <tr class="par">
+          <td>Repetir con condición</td>
+          <td>Mientras - FinMientras</td>
+          <td>while</td>
+          <td>while</td>
+        </tr>
+        <tr>
+          <td>Fin de instrucción</td>
+          <td>;</td>
+          <td>Salto de línea</td>
+          <td>;</td>
+        </tr>
+      </table>
+
+  <h3>Ejemplo: el mismo saludo en tres lenguajes</h3>
+  <p>Este es el algoritmo de la sección 3 escrito en <strong>PseInt</strong>, <strong>Python</strong> y <strong>C++</strong>.</p>
+  <img src="imagenes/ejemplo1.jpg" alt="ejemplo1" class="img-pseint">
+
+<p class="volver"><a href="#arriba">Volver al inicio &uarr;</a></p>
+
+      <h2 id="Biblioteca">5. Biblioteca de enlaces</h2>
+      <p>Acá habrá variedad de enlaces para que te puedas seguir informando sobre <strong>PseInt</strong>.</p>
+      <h3>Guía de PseInt</h3>
+      <p>Acá podrás visualizar un PDF con una guía de este lenguaje de pseudocódigo para que puedas alimentar tu conocimiento.</p>
+      <hr>
+      <div class="visor-pdf">
+        <iframe
+          src="enlaces/guiapseint.pdf#toolbar=1&navpanes=0"
+          width="100%"
+          height="520"
+          title="Vista previa de la Guía de PSeInt">
+        </iframe>
+      </div>
+      <hr>
+      <h3>Enlaces de canales donde los creadores de contenido te harán entender el pseudocódigo de manera didáctica.</h3>
+      <hr>
+      <p>
+        <a href="https://www.youtube.com/watch?v=FvibfpSVFBw&list=PLAzlSdU-KYwXllXcUCW-BylQZemcDV798" target="_blank" rel="noopener noreferrer">
+          Aprende PseInt desde cero con el creador de contenido <strong>"Danisable"</strong>.
+        </a>
+      </p>
+      <hr>
+      <p>
+        <a href="https://www.youtube.com/watch?v=f5ofAydgHFU&list=PLHpcPwRNDklKQxB_V8XGwcPSiHSWYb9SQ" target="_blank" rel="noopener noreferrer">
+          CURSO de LÓGICA de PROGRAMACIÓN con PSEINT con el creador de contenido <strong>"DacarSoft"</strong>.
+        </a>
+      </p>
+      <hr>
+      <p class="volver"><a href="#arriba">Volver al inicio &uarr;</a></p>
+
+      <footer id="pie-pagina">
+        <p>Alumno: Cristhian Hilario Macazana</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

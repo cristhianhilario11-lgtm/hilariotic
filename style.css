@@ -1,0 +1,363 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  color: #333333;
+  background-color: #efefef;
+  margin: 0px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+a {
+  color: #0088dd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005588;
+  text-decoration: underline;
+}
+
+#pantalla-bienvenida, #contenido-guia, #contenedor, iframe {
+  box-sizing: border-box;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+#pantalla-bienvenida {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background-color: #006699;
+  background-image:
+    linear-gradient(135deg, rgba(0, 59, 102, 0.85) 0%, rgba(0, 102, 153, 0.82) 55%, rgba(0, 136, 221, 0.85) 100%),
+    url("imagenes/fondo3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contenido-bienvenida {
+  max-width: 650px;
+  width: 100%;
+  animation: aparecer 0.8s ease-out;
+}
+
+.titulo-principal {
+  font-family: Georgia, Times, serif;
+  font-size: 56px;
+  letter-spacing: 1px;
+  margin: 0px 0px 25px 0px;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+#btn-ingresar {
+  background-color: #ffffff;
+  color: #006699;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 44px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+#btn-ingresar:hover {
+  background-color: #e6f4ff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+#btn-ingresar:active {
+  transform: none;
+}
+
+
+.zona-reloj {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reloj-analogico {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background-color: #ffffff;
+  border: 6px solid #002847;
+  border-radius: 50%;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.35), inset 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+.marca {
+  position: absolute;
+  font-weight: bold;
+  font-size: 15px;
+  color: #003b66;
+}
+
+.marca-12, .marca-6 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.marca-3, .marca-9 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.marca-12 { top: 8px; }
+.marca-6  { bottom: 8px; }
+.marca-3  { right: 10px; }
+.marca-9  { left: 10px; }
+
+.aguja {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  border-radius: 4px;
+}
+
+.hora {
+  width: 5px;
+  height: 46px;
+  margin-left: -2.5px;
+  background-color: #003b66;
+}
+
+.minuto {
+  width: 3.5px;
+  height: 64px;
+  margin-left: -1.75px;
+  background-color: #0077b6;
+}
+
+.segundo {
+  width: 2px;
+  height: 74px;
+  margin-left: -1px;
+  background-color: #e63946;
+}
+
+.centro-reloj {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  background-color: #002847;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hora-digital {
+  margin: 16px 0px 6px 0px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #d9f0ff;
+}
+
+.saludo-horario {
+  margin: 0px;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+#contenido-guia {
+  min-height: 100vh;
+  padding: 15px 0px;
+  background-image: url("imagenes/fondo1.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#contenedor {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  animation: aparecer 0.6s ease-out;
+}
+
+#contenedor p {
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+
+h2, #contenedor h1 {
+  font-family: Georgia, Times, serif;
+  color: #230d5c;
+  border-bottom: 1px solid #230d5c;
+  padding-bottom: 5px;
+}
+
+#contenedor h1 {
+  font-size: 50px;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  border-bottom-width: 2px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 18px;
+  color: #444444;
+  margin-top: 20px;
+}
+
+
+.introduccion {
+  font-size: 17px;
+  color: #555555;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #0088dd;
+  transition: background-color 0.3s ease;
+}
+
+.introduccion:hover {
+  background-color: #f0f7fb;
+}
+
+ul {
+  list-style-type: square;
+  line-height: 1.6em;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.indice a {
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.indice a:hover {
+  transform: translateX(6px);
+  color: #004466;
+}
+
+
+.img-pseint {
+  display: block;
+  max-width: 100%;
+  max-height: 55vh;
+  margin: 16px auto;
+  object-fit: contain;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0px 20px 0px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+}
+
+th {
+  background-color: #006699;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+tr {
+  transition: background-color 0.25s ease;
+}
+
+tr.par {
+  background-color: #f4f8fa;
+}
+
+tr:hover {
+  background-color: #e6f2f8;
+}
+
+
+#contenedor .volver {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.volver a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #f4f8fa;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.volver a:hover {
+  background-color: #006699;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+#pie-pagina {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #cccccc;
+  font-size: 13px;
+  color: #777777;
+}
+
+#pie-pagina p {
+  text-align: center;
+}
